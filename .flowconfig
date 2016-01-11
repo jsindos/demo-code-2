@@ -1,0 +1,10 @@
+[ignore]
+.*/node_modules/react/node_modules/fbjs/flow/*
+
+[include]
+./src/js
+./test/js
+
+[libs]
+
+[options]

@@ -1,0 +1,44 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    // 0 means off, 1 means warning (will not affect exit code), 2 means error (will affect exit code)
+
+    // error if there is invalid or incomplete JSDoc comments
+    "valid-jsdoc": 2,
+
+    // Prevents react to be incorrectly marked as unused
+    "react/jsx-uses-react": 2,
+    // Prevents variables used in JSX to be incorrectly marked as unused
+    "react/jsx-uses-vars": 2,
+    // Prevents missing react when using JSX
+    "react/react-in-jsx-scope": 2,
+
+    // Require let or const instead of var
+    "no-var": 2,
+
+    // ignore ID length settings since we are doing a fair bit of FP
+    "id-length": [0, {"min": 2, "properties": "never"}],
+
+    // warns if there is a missing trailing comma on arrays or objects that span multiple lines
+    // warns if there is a trailing comma present on single line arrays or objects
+    "comma-dangle": [2, "always-multiline"],
+
+    // Ignore immutable-js functions
+    "new-cap": [
+      2,
+      {"capIsNewExceptions":
+        ["List", "Map", "Seq"]
+      }
+    ],
+
+    // disallow use of console
+    "no-console": 2
+  },
+  "plugins": [
+    "react"
+  ]
+}
